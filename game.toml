@@ -1,0 +1,56 @@
+# Autofilled by tools/new_project_layout/probe_disc.py from your legal dump.
+# Review before shipping. Runtime quirks / overlay seeds still need hand work.
+
+[game]
+name = "Spyro the Dragon"
+id = "SCES-01438"
+players = 1
+exe = "disc/SCES_014.38"
+disc = "disc/Spyro the Dragon (Europe, Australia) (En,Fr,De,Es,It).cue"
+load_address = "0x80010000"
+entry_pc = "0x80060D10"
+text_size = "0x0006C000"
+stack_base = "0x801FFFF0"
+
+# Digests are for data Track 01 (first BINARY FILE / TRACK 01).
+[prepare_disc]
+out_dir = "disc"
+bin_name = "Spyro the Dragon (Europe, Australia) (En,Fr,De,Es,It).bin"
+cue_name = "Spyro the Dragon (Europe, Australia) (En,Fr,De,Es,It).cue"
+boot_exe = "SCES_014.38"
+known_sizes = [732391632]
+known_md5 = [
+  "8802a4466be7e522db3f6fc3da4830f8",
+]
+known_sha1 = [
+  "52bba2f6a7eec6ac7dc4d08de13a01b0bbce30b6",
+]
+known_crc32 = [
+  "adb35999",
+]
+
+[recompiler]
+seeds = "seeds/ghidra_funcs.txt"
+out_dir = "generated"
+bios_config = "psxrecomp/bios/SCPH5552.toml"
+strict = true
+
+[runtime]
+window_title = "Spyro the Dragon Recompiled"
+memcard_dir = "saves"
+bios_hle = false
+openbios = false
+
+[video]
+renderer = "opengl"
+aspect_ratio = "4:3"
+
+[controller]
+default_mode = "digital"
+
+# Online mount gate: digests + track count + optional TOC fingerprint
+# (see docs/NETPLAY.md).
+[netplay]
+require_cue = true
+required_tracks = 1
+required_disc_fp = "d6c6fbaaf0124a88567602e3f6268c0383102067f63c44e36e54b9b261f5b610"

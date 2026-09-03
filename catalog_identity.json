@@ -1,0 +1,48 @@
+{
+  "format_version": 1,
+  "game": {
+    "name": "Spyro the Dragon",
+    "id": "SCES-01438",
+    "boot_exe": "SCES_014.38"
+  },
+  "marketing": {
+    "description": "Spyro the Dragon recompiled for modern systems using psxrecomp.",
+    "publisher": "Sony Computer Entertainment Europe",
+    "year": "1998",
+    "region": "Europe",
+    "players": 1
+  },
+  "rom_identity": {
+    "cue_name": "Spyro the Dragon (Europe, Australia) (En,Fr,De,Es,It).cue",
+    "bin_name": "Spyro the Dragon (Europe, Australia) (En,Fr,De,Es,It).bin",
+    "track_counts": [
+      1
+    ],
+    "require_cue": true,
+    "data_track": {
+      "size": 732391632,
+      "md5": "8802a4466be7e522db3f6fc3da4830f8",
+      "sha1": "52bba2f6a7eec6ac7dc4d08de13a01b0bbce30b6",
+      "sha256": "dfba8b1c19f21ac235347d39b17b1be5633d8d00d57f6b0173caf7b04a21ff8b",
+      "crc32": "adb35999"
+    },
+    "disc_fp": "d6c6fbaaf0124a88567602e3f6268c0383102067f63c44e36e54b9b261f5b610"
+  },
+  "exe": {
+    "load_address": "0x80010000",
+    "entry_pc": "0x80060D10",
+    "text_size": "0x0006C000",
+    "stack_base": "0x801FFFF0"
+  },
+  "seeds": {
+    "count": 548,
+    "source": "boot_exe_jal"
+  },
+  "warnings": [],
+  "notes": [
+    "entry_pc/load_address/text_size/stack_base taken from PS-X EXE header.",
+    "seeds are first-pass boot-EXE JAL targets (+ entry); expect to grow as overlays / runtime paths are discovered.",
+    "required_disc_fp is psxrecomp-toc-v1 (matches runtime DiscIdentity).",
+    "This verified Redump release is a complete one-track disc."
+  ]
+}
